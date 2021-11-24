@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Foundation
+import AVFoundation
+import AVKit
 
 struct ContentView: View {
     @State private var isCounting = false // is actively counting
@@ -14,11 +16,16 @@ struct ContentView: View {
     
     @State private var isActive = true // app is active
     
-//    @State private var timeRemaining = 15
+    //    @State private var timeRemaining = 15
     
-    @State private var inhale = 5
+    @State private var inhale = 2
     @State private var pause = 1
-    @State private var exhale = 5
+    @State private var exhale = 2
+    
+    @State private var soundEffect: AVAudioPlayer?
+    @State private var playsound = true
+    
+    let tttt = Timer() // testing REMOVE
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -36,18 +43,18 @@ struct ContentView: View {
                         .opacity(0.75)
                 ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-//            Spacer()
-//            Text("Time: \(timeRemaining)")
-//                .font(.largeTitle)
-//                .foregroundColor(.white)
-//                .padding(.horizontal, 20)
-//                .padding(.vertical, 5)
-//                .background(
-//                    Capsule()
-//                        .fill(Color.black)
-//                        .opacity(0.75)
-//                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-//                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+            //            Spacer()
+            //            Text("Time: \(timeRemaining)")
+            //                .font(.largeTitle)
+            //                .foregroundColor(.white)
+            //                .padding(.horizontal, 20)
+            //                .padding(.vertical, 5)
+            //                .background(
+            //                    Capsule()
+            //                        .fill(Color.black)
+            //                        .opacity(0.75)
+            //                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+            //                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             Spacer()
             HStack {
                 Spacer()
@@ -78,15 +85,25 @@ struct ContentView: View {
         }
         .onReceive(timer) { time in
             guard self.isCounting && self.isActive else {return}
-//            if self.timeRemaining > 0 {
-//                self.timeRemaining -= 1
-//            }
+            //            if self.timeRemaining > 0 {
+            //                self.timeRemaining -= 1
             
             if self.inhale > 0 {
+//                if (self.playsound) {
+//                    playSound("inhale")
+//                    self.playsound = false
+//                }
                 self.inhale -= 1
             } else if self.pause > 0 {
+//                playSound("boop")
+                AudioServicesPlaySystemSound(1054)
                 self.pause -= 1
+                self.playsound = true
             } else if self.exhale > 0 {
+                if (self.playsound) {
+                    playSound("exhale")
+                    self.playsound = false
+                }
                 self.exhale -= 1
             } else {
                 stop_and_reset()
@@ -101,20 +118,23 @@ struct ContentView: View {
     }
     
     func stop_and_reset() {
+        self.tttt.invalidate()
+        
         self.isCounting = false
         self.isStarted = false
         
-        self.inhale = 5
+        self.inhale = 2
         self.pause = 1
-        self.exhale = 5
-//        self.timeRemaining = 15
+        self.exhale = 2
+        //        self.timeRemaining = 15
     }
-        
+    
     func tap(_ state: String) {
         switch state {
         case "Start":
             self.isCounting.toggle()
             self.isStarted.toggle()
+            playSound("inhale")
         case "Pause":
             self.isCounting = false
         case "Resume":
@@ -127,6 +147,16 @@ struct ContentView: View {
         }
     }
     
+    func playSound(_ sound: String) {
+        let path = Bundle.main.path(forResource: "\(sound).m4a", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        do {
+            soundEffect = try AVAudioPlayer(contentsOf: url)
+            soundEffect?.play()
+        } catch {
+            print(error)
+        }
+    }
     
     struct RoundButtonStyle: ButtonStyle {
         let color: Color
@@ -169,8 +199,6 @@ struct ContentView: View {
             //                )
         }
     }
-    
-    
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {

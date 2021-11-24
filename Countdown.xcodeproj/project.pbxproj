@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB565CA0274E62800096C272 /* exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9E274E62360096C272 /* exhale.m4a */; };
+		CB565CA1274E62800096C272 /* inhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9F274E62360096C272 /* inhale.m4a */; };
+		CB565CA2274E62870096C272 /* exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9E274E62360096C272 /* exhale.m4a */; };
+		CB565CA3274E62870096C272 /* inhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9F274E62360096C272 /* inhale.m4a */; };
+		CB565CA5274E681F0096C272 /* boop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565CA4274E681F0096C272 /* boop.m4a */; };
+		CB565CA6274E681F0096C272 /* boop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565CA4274E681F0096C272 /* boop.m4a */; };
 		CB842976274D5BC70098021B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842975274D5BC70098021B /* Tests_iOS.swift */; };
 		CB842978274D5BC70098021B /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842977274D5BC70098021B /* Tests_iOSLaunchTests.swift */; };
 		CB842982274D5BC70098021B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842981274D5BC70098021B /* Tests_macOS.swift */; };
@@ -37,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB565C9E274E62360096C272 /* exhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = exhale.m4a; sourceTree = "<group>"; };
+		CB565C9F274E62360096C272 /* inhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = inhale.m4a; sourceTree = "<group>"; };
+		CB565CA4274E681F0096C272 /* boop.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = boop.m4a; sourceTree = "<group>"; };
 		CB84295D274D5BC70098021B /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		CB84295E274D5BC70098021B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB84295F274D5BC70098021B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB565C9D274E62160096C272 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB565CA4274E681F0096C272 /* boop.m4a */,
+				CB565C9E274E62360096C272 /* exhale.m4a */,
+				CB565C9F274E62360096C272 /* inhale.m4a */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CB842957274D5BC70098021B = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +118,7 @@
 			children = (
 				CB84295D274D5BC70098021B /* CountdownApp.swift */,
 				CB84295E274D5BC70098021B /* ContentView.swift */,
+				CB565C9D274E62160096C272 /* Resources */,
 				CB84295F274D5BC70098021B /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -266,6 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB565CA5274E681F0096C272 /* boop.m4a in Resources */,
+				CB565CA0274E62800096C272 /* exhale.m4a in Resources */,
+				CB565CA1274E62800096C272 /* inhale.m4a in Resources */,
 				CB842989274D5BC70098021B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +297,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB565CA6274E681F0096C272 /* boop.m4a in Resources */,
+				CB565CA2274E62870096C272 /* exhale.m4a in Resources */,
+				CB565CA3274E62870096C272 /* inhale.m4a in Resources */,
 				CB84298A274D5BC70098021B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
