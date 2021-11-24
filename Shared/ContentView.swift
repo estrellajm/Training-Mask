@@ -138,11 +138,6 @@ struct ContentView: View {
     }
     
     
-    extension LinearGradient {
-        init(_ colors: Color...) {
-            self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
-        }
-    }
        
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
@@ -150,3 +145,10 @@ struct ContentView: View {
         }
     }
 }
+
+extension LinearGradient {
+    init(_ colors: Color...) {
+        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
