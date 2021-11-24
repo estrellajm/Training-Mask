@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
     @State private var isCounting = false // is actively counting
@@ -13,13 +14,18 @@ struct ContentView: View {
     
     @State private var isActive = true // app is active
     
-    @State private var timeRemaining = 100
+//    @State private var timeRemaining = 15
+    
+    @State private var inhale = 5
+    @State private var pause = 1
+    @State private var exhale = 5
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
             Spacer()
-            Text("Time: \(timeRemaining)")
+            Text("\(String(format: "%02d", inhale)) : \(String(format: "%02d", pause)) : \(String(format: "%02d", exhale))")
                 .font(.largeTitle)
                 .foregroundColor(.white)
                 .padding(.horizontal, 20)
@@ -30,6 +36,18 @@ struct ContentView: View {
                         .opacity(0.75)
                 ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+//            Spacer()
+//            Text("Time: \(timeRemaining)")
+//                .font(.largeTitle)
+//                .foregroundColor(.white)
+//                .padding(.horizontal, 20)
+//                .padding(.vertical, 5)
+//                .background(
+//                    Capsule()
+//                        .fill(Color.black)
+//                        .opacity(0.75)
+//                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+//                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             Spacer()
             HStack {
                 Spacer()
@@ -60,8 +78,18 @@ struct ContentView: View {
         }
         .onReceive(timer) { time in
             guard self.isCounting && self.isActive else {return}
-            if self.timeRemaining > 0 {
-                self.timeRemaining -= 1
+//            if self.timeRemaining > 0 {
+//                self.timeRemaining -= 1
+//            }
+            
+            if self.inhale > 0 {
+                self.inhale -= 1
+            } else if self.pause > 0 {
+                self.pause -= 1
+            } else if self.exhale > 0 {
+                self.exhale -= 1
+            } else {
+                stop_and_reset()
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
@@ -72,23 +100,28 @@ struct ContentView: View {
         }
     }
     
+    func stop_and_reset() {
+        self.isCounting = false
+        self.isStarted = false
+        
+        self.inhale = 5
+        self.pause = 1
+        self.exhale = 5
+//        self.timeRemaining = 15
+    }
+        
     func tap(_ state: String) {
         switch state {
         case "Start":
             self.isCounting.toggle()
             self.isStarted.toggle()
-            print("fuck")
-            
         case "Pause":
             self.isCounting = false
-            
         case "Resume":
             self.isCounting = true
-            
         case "Cancel":
-            self.isCounting = false
-            self.isStarted = false
-            self.timeRemaining = 100
+            stop_and_reset()
+            
         default:
             print("Have you done something new?")
         }
@@ -110,7 +143,7 @@ struct ContentView: View {
                 .padding(5)
                 .background(
                     Circle()
-                        .fill(color.opacity(0.5))
+                        .fill(color.opacity(0.75))
                         .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                         .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                     
@@ -130,15 +163,15 @@ struct ContentView: View {
                                 .mask(Circle().fill(LinearGradient(Color.clear, Color.black)))
                         )
                 )
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 8)
-//                        .stroke(configuration.isPressed ? color.opacity(0.5) : color, lineWidth: 1.5)
-//                )
+            //                .overlay(
+            //                    RoundedRectangle(cornerRadius: 8)
+            //                        .stroke(configuration.isPressed ? color.opacity(0.5) : color, lineWidth: 1.5)
+            //                )
         }
     }
     
     
-       
+    
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
