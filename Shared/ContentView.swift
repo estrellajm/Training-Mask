@@ -28,7 +28,8 @@ struct ContentView: View {
                     Capsule()
                         .fill(Color.black)
                         .opacity(0.75)
-                )
+                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             Spacer()
             HStack {
                 Spacer()
@@ -76,6 +77,7 @@ struct ContentView: View {
         case "Start":
             self.isCounting.toggle()
             self.isStarted.toggle()
+            print("fuck")
             
         case "Pause":
             self.isCounting = false
@@ -92,21 +94,7 @@ struct ContentView: View {
         }
     }
     
-    //    struct RoundButtonStyle: PrimitiveButtonStyle {
-    //        let color: Color
-    //
-    //        func makeBody(configuration: Configuration) -> some View {
-    //            let val: CGFloat = 120
-    //            configuration.label
-    //                .frame(width: val, height: val)
-    //                .font(.title)
-    //                .foregroundColor(color == .orange ? .black : .white)
-    //                .background(color)
-    //                .clipShape(Circle())
-    //                .onTapGesture { configuration.trigger() }
-    //        }
-    //    }
-    //
+    
     struct RoundButtonStyle: ButtonStyle {
         let color: Color
         
@@ -118,26 +106,44 @@ struct ContentView: View {
                 .foregroundColor(color == .orange ? .black : .white)
                 .background(configuration.isPressed ? color.opacity(0.5): color)
                 .clipShape(Circle())
-                .foregroundColor(configuration.isPressed ? .red.opacity(0.5) : .red)
-            //                .overlay(
-            //                    RoundedRectangle(cornerRadius: 8)
-            //                        .stroke(configuration.isPressed ? .red.opacity(0.5) : .red, lineWidth: 1.5)
-            //                )
-        }
-    }
-    
-    struct PrimaryButtonStyle: ButtonStyle {
-        func makeBody(configuration: Configuration) -> some View {
-            configuration.label
+                .foregroundColor(configuration.isPressed ? color.opacity(0.5) : color)
                 .padding(5)
-                .foregroundColor(configuration.isPressed ? .red.opacity(0.5) : .red)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(configuration.isPressed ? .red.opacity(0.5) : .red, lineWidth: 1.5)
+                .background(
+                    Circle()
+                        .fill(color.opacity(0.5))
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                    
+                    
+                        .overlay(
+                            Circle()
+                                .stroke(Color.gray, lineWidth: 4)
+                                .blur(radius: 4)
+                                .offset(x: 2, y: 2)
+                                .mask(Circle().fill(LinearGradient(Color.black, Color.clear)))
+                        )
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 8)
+                                .blur(radius: 4)
+                                .offset(x: -2, y: -2)
+                                .mask(Circle().fill(LinearGradient(Color.clear, Color.black)))
+                        )
                 )
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 8)
+//                        .stroke(configuration.isPressed ? color.opacity(0.5) : color, lineWidth: 1.5)
+//                )
         }
     }
     
+    
+    extension LinearGradient {
+        init(_ colors: Color...) {
+            self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+        }
+    }
+       
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()

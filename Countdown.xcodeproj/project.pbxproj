@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB4371A8274D699A001657E8 /* OtherButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4371A7274D699A001657E8 /* OtherButtonsView.swift */; };
-		CB4371A9274D699A001657E8 /* OtherButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4371A7274D699A001657E8 /* OtherButtonsView.swift */; };
 		CB842976274D5BC70098021B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842975274D5BC70098021B /* Tests_iOS.swift */; };
 		CB842978274D5BC70098021B /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842977274D5BC70098021B /* Tests_iOSLaunchTests.swift */; };
 		CB842982274D5BC70098021B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842981274D5BC70098021B /* Tests_macOS.swift */; };
@@ -39,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB4371A7274D699A001657E8 /* OtherButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherButtonsView.swift; sourceTree = "<group>"; };
 		CB84295D274D5BC70098021B /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		CB84295E274D5BC70098021B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB84295F274D5BC70098021B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 			children = (
 				CB84295D274D5BC70098021B /* CountdownApp.swift */,
 				CB84295E274D5BC70098021B /* ContentView.swift */,
-				CB4371A7274D699A001657E8 /* OtherButtonsView.swift */,
 				CB84295F274D5BC70098021B /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -304,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB842987274D5BC70098021B /* ContentView.swift in Sources */,
-				CB4371A8274D699A001657E8 /* OtherButtonsView.swift in Sources */,
 				CB842985274D5BC70098021B /* CountdownApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB842988274D5BC70098021B /* ContentView.swift in Sources */,
-				CB4371A9274D699A001657E8 /* OtherButtonsView.swift in Sources */,
 				CB842986274D5BC70098021B /* CountdownApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
