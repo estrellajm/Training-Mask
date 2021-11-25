@@ -16,11 +16,9 @@ struct ContentView: View {
     
     @State private var isActive = true // app is active
     
-    //    @State private var timeRemaining = 15
-    
-    @State private var inhale = 2
+    @State private var inhale = 5
     @State private var pause = 1
-    @State private var exhale = 2
+    @State private var exhale = 3
     
     @State private var soundEffect: AVAudioPlayer?
     @State private var playsound = true
@@ -32,7 +30,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("\(String(format: "%02d", inhale)) : \(String(format: "%02d", pause)) : \(String(format: "%02d", exhale))")
+            Text("\(dd(inhale)) : \(dd(pause)) : \(dd(exhale))")
                 .font(.largeTitle)
                 .foregroundColor(.white)
                 .padding(.horizontal, 20)
@@ -43,43 +41,31 @@ struct ContentView: View {
                         .opacity(0.75)
                 ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-            //            Spacer()
-            //            Text("Time: \(timeRemaining)")
-            //                .font(.largeTitle)
-            //                .foregroundColor(.white)
-            //                .padding(.horizontal, 20)
-            //                .padding(.vertical, 5)
-            //                .background(
-            //                    Capsule()
-            //                        .fill(Color.black)
-            //                        .opacity(0.75)
-            //                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-            //                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             Spacer()
             HStack {
                 Spacer()
-                if (!isStarted) {
-                    Button("Start", action: { tap("Start")}).buttonStyle(RoundButtonStyle(color: .green))
-                } else {
-                    if (!isCounting) {
-                        Button("Resume", action: { tap("Resume")}).buttonStyle(RoundButtonStyle(color: .green))
-                    } else {
-                        Button("Pause", action: { tap("Pause")}).buttonStyle(RoundButtonStyle(color: .orange))
-                    }
-                    Spacer()
-                    Button("Cancel", action: { tap("Cancel") }).buttonStyle(RoundButtonStyle(color: .gray))
-                }
-                //                if (!isCounting) {
-                //                    if (!isStarted) {
-                //                        Button("Start", action: { tap("Start")}).buttonStyle(RoundButtonStyle(color: .green))
-                //                    } else {
-                //                        Button("Resume", action: { tap("Resume")}).buttonStyle(RoundButtonStyle(color: .green))
-                //                    }
+                //                if (!isStarted) {
+                //                    Button("Start", action: { tap("Start")}).buttonStyle(RoundButtonStyle(color: .green))
                 //                } else {
-                //                    Button("Pause", action: { tap("Pause")}).buttonStyle(RoundButtonStyle(color: .orange))
+                //                    if (!isCounting) {
+                //                        Button("Resume", action: { tap("Resume")}).buttonStyle(RoundButtonStyle(color: .green))
+                //                    } else {
+                //                        Button("Pause", action: { tap("Pause")}).buttonStyle(RoundButtonStyle(color: .orange))
+                //                    }
+                //                    Spacer()
+                //                    Button("Cancel", action: { tap("Cancel") }).buttonStyle(RoundButtonStyle(color: .gray))
                 //                }
-                //                Spacer()
-                //                Button("Cancel", action: { tap("Cancel") }).buttonStyle(RoundButtonStyle(color: .gray))
+                if (!isCounting) {
+                    if (!isStarted) {
+                        Button("Start", action: { tap("Start")}).buttonStyle(RoundButtonStyle(color: .green))
+                    } else {
+                        Button("Resume", action: { tap("Resume")}).buttonStyle(RoundButtonStyle(color: .green))
+                    }
+                } else {
+                    Button("Pause", action: { tap("Pause")}).buttonStyle(RoundButtonStyle(color: .orange))
+                }
+                Spacer()
+                Button("Cancel", action: { tap("Cancel") }).buttonStyle(RoundButtonStyle(color: .gray))
                 Spacer()
             }
         }
@@ -89,13 +75,13 @@ struct ContentView: View {
             //                self.timeRemaining -= 1
             
             if self.inhale > 0 {
-//                if (self.playsound) {
-//                    playSound("inhale")
-//                    self.playsound = false
-//                }
+                //                if (self.playsound) {
+                //                    playSound("inhale")
+                //                    self.playsound = false
+                //                }
                 self.inhale -= 1
             } else if self.pause > 0 {
-//                playSound("boop")
+                //                playSound("boop")
                 AudioServicesPlaySystemSound(1054)
                 self.pause -= 1
                 self.playsound = true
@@ -115,6 +101,10 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             self.isActive = true
         }
+    }
+    
+    func dd(_ digit: Int) -> String {
+        return String(format: "%02d", digit)
     }
     
     func stop_and_reset() {
@@ -162,7 +152,7 @@ struct ContentView: View {
         let color: Color
         
         func makeBody(configuration: Configuration) -> some View {
-            let val: CGFloat = 120
+            let val: CGFloat = 130
             configuration.label
                 .frame(width: val, height: val)
                 .font(.title)
@@ -193,10 +183,6 @@ struct ContentView: View {
                                 .mask(Circle().fill(LinearGradient(Color.clear, Color.black)))
                         )
                 )
-            //                .overlay(
-            //                    RoundedRectangle(cornerRadius: 8)
-            //                        .stroke(configuration.isPressed ? color.opacity(0.5) : color, lineWidth: 1.5)
-            //                )
         }
     }
     

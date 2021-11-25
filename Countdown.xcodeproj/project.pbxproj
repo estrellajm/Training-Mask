@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB01BFD2274FD42F007977D9 /* RainbowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */; };
+		CB01BFD3274FD42F007977D9 /* RainbowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */; };
+		CB01BFD5274FDBFA007977D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD4274FDBFA007977D9 /* Constants.swift */; };
+		CB01BFD6274FDBFA007977D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD4274FDBFA007977D9 /* Constants.swift */; };
+		CB01BFD8274FDC05007977D9 /* StandardExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD7274FDC05007977D9 /* StandardExercise.swift */; };
+		CB01BFD9274FDC05007977D9 /* StandardExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD7274FDC05007977D9 /* StandardExercise.swift */; };
+		CB01BFDB274FDC0F007977D9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDA274FDC0F007977D9 /* Exercise.swift */; };
+		CB01BFDC274FDC0F007977D9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDA274FDC0F007977D9 /* Exercise.swift */; };
+		CB01BFDE274FDC77007977D9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDD274FDC77007977D9 /* HomeVM.swift */; };
+		CB01BFDF274FDC77007977D9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDD274FDC77007977D9 /* HomeVM.swift */; };
+		CB01BFE127500983007977D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFE027500983007977D9 /* HomeView.swift */; };
+		CB01BFE227500983007977D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFE027500983007977D9 /* HomeView.swift */; };
 		CB565CA0274E62800096C272 /* exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9E274E62360096C272 /* exhale.m4a */; };
 		CB565CA1274E62800096C272 /* inhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9F274E62360096C272 /* inhale.m4a */; };
 		CB565CA2274E62870096C272 /* exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9E274E62360096C272 /* exhale.m4a */; };
@@ -43,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowCircle.swift; sourceTree = "<group>"; };
+		CB01BFD4274FDBFA007977D9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB01BFD7274FDC05007977D9 /* StandardExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardExercise.swift; sourceTree = "<group>"; };
+		CB01BFDA274FDC0F007977D9 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		CB01BFDD274FDC77007977D9 /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		CB01BFE027500983007977D9 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CB565C9E274E62360096C272 /* exhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = exhale.m4a; sourceTree = "<group>"; };
 		CB565C9F274E62360096C272 /* inhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = inhale.m4a; sourceTree = "<group>"; };
 		CB565CA4274E681F0096C272 /* boop.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = boop.m4a; sourceTree = "<group>"; };
@@ -118,6 +136,12 @@
 			children = (
 				CB84295D274D5BC70098021B /* CountdownApp.swift */,
 				CB84295E274D5BC70098021B /* ContentView.swift */,
+				CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */,
+				CB01BFDA274FDC0F007977D9 /* Exercise.swift */,
+				CB01BFE027500983007977D9 /* HomeView.swift */,
+				CB01BFDD274FDC77007977D9 /* HomeVM.swift */,
+				CB01BFD7274FDC05007977D9 /* StandardExercise.swift */,
+				CB01BFD4274FDBFA007977D9 /* Constants.swift */,
 				CB565C9D274E62160096C272 /* Resources */,
 				CB84295F274D5BC70098021B /* Assets.xcassets */,
 			);
@@ -327,6 +351,12 @@
 			files = (
 				CB842987274D5BC70098021B /* ContentView.swift in Sources */,
 				CB842985274D5BC70098021B /* CountdownApp.swift in Sources */,
+				CB01BFDE274FDC77007977D9 /* HomeVM.swift in Sources */,
+				CB01BFD2274FD42F007977D9 /* RainbowCircle.swift in Sources */,
+				CB01BFD8274FDC05007977D9 /* StandardExercise.swift in Sources */,
+				CB01BFE127500983007977D9 /* HomeView.swift in Sources */,
+				CB01BFD5274FDBFA007977D9 /* Constants.swift in Sources */,
+				CB01BFDB274FDC0F007977D9 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +366,12 @@
 			files = (
 				CB842988274D5BC70098021B /* ContentView.swift in Sources */,
 				CB842986274D5BC70098021B /* CountdownApp.swift in Sources */,
+				CB01BFDF274FDC77007977D9 /* HomeVM.swift in Sources */,
+				CB01BFD3274FD42F007977D9 /* RainbowCircle.swift in Sources */,
+				CB01BFD9274FDC05007977D9 /* StandardExercise.swift in Sources */,
+				CB01BFE227500983007977D9 /* HomeView.swift in Sources */,
+				CB01BFD6274FDBFA007977D9 /* Constants.swift in Sources */,
+				CB01BFDC274FDC0F007977D9 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
