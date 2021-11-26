@@ -11,6 +11,7 @@ import AVFoundation
 import AVKit
 
 struct CountdownView: View {
+    @State var exercise: Exercise
     @State var title: String
     //    var description: String?
     @State var image: String
@@ -28,7 +29,9 @@ struct CountdownView: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        let time = toMins((inhale + hold + exhale) * bps * sets)
+//        let time = toMins((inhale + hold + exhale) * bps * sets)
+        var set_time = ((inhale + hold + exhale) * bps)
+        var exercise_time = (((inhale + hold + exhale) * bps) * sets)
         VStack {
             Spacer()
             VStack{
@@ -41,7 +44,7 @@ struct CountdownView: View {
                 Text("\(dd(inhale)) : \(dd(hold)) : \(dd(exhale))")
                     .font(.system(size: 50))
                     .foregroundColor(.white)
-                Text("  Inhale           Hold          Exhable")
+                Text(" Inhale           Hold          Exhable")
                     .foregroundColor(.yellow)
                 //                Text("BPS: \(bps) / \(bps)")
                 //                    .padding(.top, 5)
@@ -63,30 +66,32 @@ struct CountdownView: View {
             ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .onTapGesture{print("Tapped")}
-            VStack{
-                HStack{
-                    Text("BPS: \(bps) / \(bps)").font(.title)
-                    Text("|").font(.largeTitle).bold()
-                    Text("Sets: \(sets) / \(sets)").font(.title)
+            HStack(spacing: 30){
+                VStack{
+                    Text("\(bps) / \(exercise.breaths_per_set)").font(.title)
+                    Text("BPS").font(.footnote).foregroundColor(.yellow)
+                    Text("\(toMins(set_time))s")
                 }
-                Text("BPS (Breaths Per Set)")
-                    .font(.footnote)
-                
+                VStack{
+                    Text("\(sets) / \(exercise.sets)").font(.title)
+                    Text("Sets").font(.footnote).foregroundColor(.yellow)
+                    Text("\(toMins(exercise_time))")
+                }
             }
-            .foregroundColor(Color(UIColor.systemBackground))
-            .padding(.horizontal, 20)
-            .padding(.vertical, 10)
-            .background(
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .opacity(0.75)
-            ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                .onTapGesture{print("Tapped")}
+                .foregroundColor(Color(UIColor.systemBackground))
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .opacity(0.75)
+                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .onTapGesture{print("Tapped")}
             VStack{
                 HStack{
                     Text("Time: ").font(.largeTitle)
                     VStack{
-                        Text("Set: \((inhale + hold + exhale) * bps)s")
-                        Text("Exercise: \(time)")
+                        Text("Set: \(set_time)s")
+                        Text("Exercise: \(exercise_time)")
                     }
                 }
             }
@@ -144,8 +149,12 @@ struct CountdownView: View {
                 }
                 exhale -= 1
             } else {
-                stop_and_reset()
+                reset()
+                bps -= 1
             }
+            
+            set_time -= 1
+            exercise_time -= 1
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
             isActive = false
@@ -165,6 +174,17 @@ struct CountdownView: View {
     
     func dd(_ digit: Int) -> String {
         return String(format: "%02d", digit)
+    }
+    
+    func stop() {
+        isCounting = false
+        isStarted = false
+    }
+    
+    func reset() {
+        inhale = exercise.inhale
+        hold = exercise.hold
+        exhale = exercise.exhale
     }
     
     func stop_and_reset() {
@@ -245,7 +265,7 @@ struct CountdownView: View {
     
     struct CountdownView_Previews: PreviewProvider {
         static var previews: some View {
-            CountdownView(title: exercise_1.title, image: exercise_1.image, inhale: exercise_1.inhale, hold: exercise_1.hold, exhale: exercise_1.exhale, bps: exercise_1.breaths_per_set, sets: exercise_1.sets)
+            CountdownView(exercise: exercise_1, title: exercise_1.title, image: exercise_1.image, inhale: exercise_1.inhale, hold: exercise_1.hold, exhale: exercise_1.exhale, bps: exercise_1.breaths_per_set, sets: exercise_1.sets)
         }
     }
 }
