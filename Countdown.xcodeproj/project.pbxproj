@@ -25,6 +25,8 @@
 		CB565CA3274E62870096C272 /* inhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9F274E62360096C272 /* inhale.m4a */; };
 		CB565CA5274E681F0096C272 /* boop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565CA4274E681F0096C272 /* boop.m4a */; };
 		CB565CA6274E681F0096C272 /* boop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565CA4274E681F0096C272 /* boop.m4a */; };
+		CB6D985E2750BD0800619B3E /* ping.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB6D985D2750BD0800619B3E /* ping.m4a */; };
+		CB6D985F2750BD0800619B3E /* ping.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB6D985D2750BD0800619B3E /* ping.m4a */; };
 		CB842976274D5BC70098021B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842975274D5BC70098021B /* Tests_iOS.swift */; };
 		CB842978274D5BC70098021B /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842977274D5BC70098021B /* Tests_iOSLaunchTests.swift */; };
 		CB842982274D5BC70098021B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842981274D5BC70098021B /* Tests_macOS.swift */; };
@@ -35,6 +37,8 @@
 		CB842988274D5BC70098021B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295E274D5BC70098021B /* ContentView.swift */; };
 		CB842989274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
 		CB84298A274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
+		CBDA3804275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
+		CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,7 @@
 		CB565C9E274E62360096C272 /* exhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = exhale.m4a; sourceTree = "<group>"; };
 		CB565C9F274E62360096C272 /* inhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = inhale.m4a; sourceTree = "<group>"; };
 		CB565CA4274E681F0096C272 /* boop.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = boop.m4a; sourceTree = "<group>"; };
+		CB6D985D2750BD0800619B3E /* ping.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ping.m4a; sourceTree = "<group>"; };
 		CB84295D274D5BC70098021B /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		CB84295E274D5BC70098021B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB84295F274D5BC70098021B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		CB84297D274D5BC70098021B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB842981274D5BC70098021B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		CB842983274D5BC70098021B /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		CBDA3803275049E7007F3AA8 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 			children = (
 				CB565CA4274E681F0096C272 /* boop.m4a */,
 				CB565C9E274E62360096C272 /* exhale.m4a */,
+				CB6D985D2750BD0800619B3E /* ping.m4a */,
 				CB565C9F274E62360096C272 /* inhale.m4a */,
 			);
 			path = Resources;
@@ -136,12 +143,9 @@
 			children = (
 				CB84295D274D5BC70098021B /* CountdownApp.swift */,
 				CB84295E274D5BC70098021B /* ContentView.swift */,
-				CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */,
-				CB01BFDA274FDC0F007977D9 /* Exercise.swift */,
-				CB01BFE027500983007977D9 /* HomeView.swift */,
-				CB01BFDD274FDC77007977D9 /* HomeVM.swift */,
-				CB01BFD7274FDC05007977D9 /* StandardExercise.swift */,
-				CB01BFD4274FDBFA007977D9 /* Constants.swift */,
+				CBDA3803275049E7007F3AA8 /* CountdownView.swift */,
+				CBDA380127503EBB007F3AA8 /* misc */,
+				CBDA380227503EC7007F3AA8 /* Exercises */,
 				CB565C9D274E62160096C272 /* Resources */,
 				CB84295F274D5BC70098021B /* Assets.xcassets */,
 			);
@@ -183,6 +187,26 @@
 				CB842983274D5BC70098021B /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		CBDA380127503EBB007F3AA8 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		CBDA380227503EC7007F3AA8 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				CB01BFDA274FDC0F007977D9 /* Exercise.swift */,
+				CB01BFE027500983007977D9 /* HomeView.swift */,
+				CB01BFDD274FDC77007977D9 /* HomeVM.swift */,
+				CB01BFD7274FDC05007977D9 /* StandardExercise.swift */,
+				CB01BFD4274FDBFA007977D9 /* Constants.swift */,
+			);
+			path = Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +337,7 @@
 				CB565CA5274E681F0096C272 /* boop.m4a in Resources */,
 				CB565CA0274E62800096C272 /* exhale.m4a in Resources */,
 				CB565CA1274E62800096C272 /* inhale.m4a in Resources */,
+				CB6D985E2750BD0800619B3E /* ping.m4a in Resources */,
 				CB842989274D5BC70098021B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +349,7 @@
 				CB565CA6274E681F0096C272 /* boop.m4a in Resources */,
 				CB565CA2274E62870096C272 /* exhale.m4a in Resources */,
 				CB565CA3274E62870096C272 /* inhale.m4a in Resources */,
+				CB6D985F2750BD0800619B3E /* ping.m4a in Resources */,
 				CB84298A274D5BC70098021B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +382,7 @@
 				CB01BFD8274FDC05007977D9 /* StandardExercise.swift in Sources */,
 				CB01BFE127500983007977D9 /* HomeView.swift in Sources */,
 				CB01BFD5274FDBFA007977D9 /* Constants.swift in Sources */,
+				CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */,
 				CB01BFDB274FDC0F007977D9 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +398,7 @@
 				CB01BFD9274FDC05007977D9 /* StandardExercise.swift in Sources */,
 				CB01BFE227500983007977D9 /* HomeView.swift in Sources */,
 				CB01BFD6274FDBFA007977D9 /* Constants.swift in Sources */,
+				CBDA3804275049E7007F3AA8 /* CountdownView.swift in Sources */,
 				CB01BFDC274FDC0F007977D9 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -513,6 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -530,11 +560,13 @@
 				DEVELOPMENT_TEAM = Z4T623QY89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Countdown--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,11 +592,13 @@
 				DEVELOPMENT_TEAM = Z4T623QY89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Countdown--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
