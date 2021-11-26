@@ -37,6 +37,8 @@
 		CB842988274D5BC70098021B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295E274D5BC70098021B /* ContentView.swift */; };
 		CB842989274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
 		CB84298A274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
+		CBC3F2F32750DBE800255869 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3F2F22750DBE800255869 /* Button.swift */; };
+		CBC3F2F42750DBE800255869 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3F2F22750DBE800255869 /* Button.swift */; };
 		CBDA3804275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
 		CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,7 @@
 		CB84297D274D5BC70098021B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB842981274D5BC70098021B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		CB842983274D5BC70098021B /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		CBC3F2F22750DBE800255869 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CBDA3803275049E7007F3AA8 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +147,7 @@
 				CB84295D274D5BC70098021B /* CountdownApp.swift */,
 				CB84295E274D5BC70098021B /* ContentView.swift */,
 				CBDA3803275049E7007F3AA8 /* CountdownView.swift */,
+				CBC3F2F22750DBE800255869 /* Button.swift */,
 				CBDA380127503EBB007F3AA8 /* misc */,
 				CBDA380227503EC7007F3AA8 /* Exercises */,
 				CB565C9D274E62160096C272 /* Resources */,
@@ -380,6 +384,7 @@
 				CB01BFDE274FDC77007977D9 /* HomeVM.swift in Sources */,
 				CB01BFD2274FD42F007977D9 /* RainbowCircle.swift in Sources */,
 				CB01BFD8274FDC05007977D9 /* StandardExercise.swift in Sources */,
+				CBC3F2F32750DBE800255869 /* Button.swift in Sources */,
 				CB01BFE127500983007977D9 /* HomeView.swift in Sources */,
 				CB01BFD5274FDBFA007977D9 /* Constants.swift in Sources */,
 				CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */,
@@ -396,6 +401,7 @@
 				CB01BFDF274FDC77007977D9 /* HomeVM.swift in Sources */,
 				CB01BFD3274FD42F007977D9 /* RainbowCircle.swift in Sources */,
 				CB01BFD9274FDC05007977D9 /* StandardExercise.swift in Sources */,
+				CBC3F2F42750DBE800255869 /* Button.swift in Sources */,
 				CB01BFE227500983007977D9 /* HomeView.swift in Sources */,
 				CB01BFD6274FDBFA007977D9 /* Constants.swift in Sources */,
 				CBDA3804275049E7007F3AA8 /* CountdownView.swift in Sources */,

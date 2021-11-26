@@ -11,31 +11,49 @@ import AVFoundation
 import AVKit
 
 struct CountdownView: View {
+    @State var title: String
+    //    var description: String?
+    @State var image: String
+    @State var inhale: Int
+    @State var hold: Int
+    @State var exhale: Int
+    @State var bps: Int
+    @State var sets: Int
+    
     @State private var isCounting = false // is actively counting
     @State private var isStarted = false // counting has started
-    
     @State private var isActive = true // app is active
-    
-    @State private var inhale = 2
-    @State private var pause = 1
-    @State private var exhale = 2
-    
     @State private var soundEffect: AVAudioPlayer?
     @State private var playsound = true
-    
-    let tttt = Timer() // testing REMOVE
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
+        let time = toMins((inhale + hold + exhale) * bps * sets)
         VStack {
             Spacer()
             VStack{
-                Text("\(dd(inhale)) : \(dd(pause)) : \(dd(exhale))")
+                Image(image).resizable().frame(width: 350, height: 200)
+                Text("\(title)").font(.title).multilineTextAlignment(.center)
+                    .padding(.bottom, 10)
+            }
+            Spacer()
+            VStack{
+                Text("\(dd(inhale)) : \(dd(hold)) : \(dd(exhale))")
                     .font(.system(size: 50))
                     .foregroundColor(.white)
                 Text("  Inhale           Hold          Exhable")
                     .foregroundColor(.yellow)
+                //                Text("BPS: \(bps) / \(bps)")
+                //                    .padding(.top, 5)
+                //                    .font(.title)
+                //                    .foregroundColor(Color(UIColor.systemBackground))
+                //                Text("Sets: \(sets) / \(sets)")
+                //                    .font(.title)
+                //                    .foregroundColor(Color(UIColor.systemBackground))
+                //                Text("BPS (Breaths Per Set)")
+                //                    .font(.footnote)
+                //                    .padding(.top, 5)
+                //                    .foregroundColor(Color(UIColor.systemBackground))
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 15)
@@ -45,6 +63,33 @@ struct CountdownView: View {
             ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .onTapGesture{print("Tapped")}
+            VStack{
+                HStack{
+                    Text("BPS: \(bps) / \(bps)").font(.title)
+                    Text("|").font(.largeTitle).bold()
+                    Text("Sets: \(sets) / \(sets)").font(.title)
+                }
+                Text("BPS (Breaths Per Set)")
+                    .font(.footnote)
+                
+            }
+            .foregroundColor(Color(UIColor.systemBackground))
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+            .background(
+                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                    .opacity(0.75)
+            ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .onTapGesture{print("Tapped")}
+            VStack{
+                HStack{
+                    Text("Time: ").font(.largeTitle)
+                    VStack{
+                        Text("Set: \((inhale + hold + exhale) * bps)s")
+                        Text("Exercise: \(time)")
+                    }
+                }
+            }
             
             Spacer()
             HStack {
@@ -77,37 +122,45 @@ struct CountdownView: View {
             }
         }
         .onReceive(timer) { time in
-            guard self.isCounting && self.isActive else {return}
-            //            if self.timeRemaining > 0 {
-            //                self.timeRemaining -= 1
+            guard isCounting && isActive else {return}
+            //            if timeRemaining > 0 {
+            //                timeRemaining -= 1
             
-            if self.inhale > 0 {
-                //                if (self.playsound) {
+            if inhale > 0 {
+                //                if (playsound) {
                 //                    playSound("inhale")
-                //                    self.playsound = false
+                //                    playsound = false
                 //                }
-                self.inhale -= 1
-            } else if self.pause > 0 {
+                inhale -= 1
+            } else if hold > 0 {
                 //                playSound("boop")
                 playSound("ping")
-                self.pause -= 1
-                self.playsound = true
-            } else if self.exhale > 0 {
-                if (self.playsound) {
+                hold -= 1
+                playsound = true
+            } else if exhale > 0 {
+                if (playsound) {
                     playSound("exhale")
-                    self.playsound = false
+                    playsound = false
                 }
-                self.exhale -= 1
+                exhale -= 1
             } else {
                 stop_and_reset()
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-            self.isActive = false
+            isActive = false
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            self.isActive = true
+            isActive = true
         }
+    }
+    
+    func toMins (_ seconds : Int) -> String {
+        //        let (h,m,s) = (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+        //        let hrs = seconds / 3600 // exercise will not come close to hours... but a consideration for the future
+        let mins = (seconds % 3600) / 60
+        let secs = (seconds % 3600) % 60
+        return "\(mins)m \(secs)s"
     }
     
     func dd(_ digit: Int) -> String {
@@ -115,30 +168,26 @@ struct CountdownView: View {
     }
     
     func stop_and_reset() {
-        self.tttt.invalidate()
+        isCounting = false
+        isStarted = false
         
-        self.isCounting = false
-        self.isStarted = false
-        
-        self.inhale = 2
-        self.pause = 1
-        self.exhale = 2
-        //        self.timeRemaining = 15
+        inhale = 2
+        hold = 1
+        exhale = 2
     }
     
     func tap(_ state: String) {
         switch state {
         case "Start":
-            self.isCounting.toggle()
-            self.isStarted.toggle()
+            isCounting.toggle()
+            isStarted.toggle()
             playSound("inhale")
         case "Pause":
-            self.isCounting = false
+            isCounting = false
         case "Resume":
-            self.isCounting = true
+            isCounting = true
         case "Cancel":
             stop_and_reset()
-            
         default:
             print("Have you done something new?")
         }
@@ -196,7 +245,7 @@ struct CountdownView: View {
     
     struct CountdownView_Previews: PreviewProvider {
         static var previews: some View {
-            CountdownView()
+            CountdownView(title: exercise_1.title, image: exercise_1.image, inhale: exercise_1.inhale, hold: exercise_1.hold, exhale: exercise_1.exhale, bps: exercise_1.breaths_per_set, sets: exercise_1.sets)
         }
     }
 }

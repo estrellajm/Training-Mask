@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StandardExercise: View {
     var exercise: Exercise
-    let image = UIImage(named: "Diaphragmatic Breathing in Hook Lying Position")
     var body: some View {
         
         VStack {
