@@ -29,7 +29,7 @@ struct CountdownView: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-//        let time = toMins((inhale + hold + exhale) * bps * sets)
+        //        let time = toMins((inhale + hold + exhale) * bps * sets)
         var set_time = ((inhale + hold + exhale) * bps)
         var exercise_time = (((inhale + hold + exhale) * bps) * sets)
         VStack {
@@ -72,7 +72,7 @@ struct CountdownView: View {
                 }
             }
             .padding(.horizontal, 20)
-            .padding(.vertical, 15)
+            .padding(.vertical, 10)
             .background(
                 RoundedRectangle(cornerRadius: 25, style: .continuous)
                     .opacity(0.75)
@@ -80,17 +80,18 @@ struct CountdownView: View {
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .onTapGesture{print("Tapped")}
             HStack(spacing: 30){
-                VStack{
-                    Text("\(bps) / \(exercise.breaths_per_set)").font(.title)
-                    Text("BPS").font(.footnote).foregroundColor(.yellow)
-                    Text("\(toMins(set_time))")
+                HStack(spacing: 30){
+                    VStack{
+                        Text("\(bps) / \(exercise.breaths_per_set)").font(.title)
+                        Text("BPS").font(.footnote).foregroundColor(.yellow)
+                        Text("\(toMins(set_time))")
+                    }
+                    VStack{
+                        Text("\(sets) / \(exercise.sets)").font(.title)
+                        Text("Sets").font(.footnote).foregroundColor(.yellow)
+                        Text("\(toMins(exercise_time))")
+                    }
                 }
-                VStack{
-                    Text("\(sets) / \(exercise.sets)").font(.title)
-                    Text("Sets").font(.footnote).foregroundColor(.yellow)
-                    Text("\(toMins(exercise_time))")
-                }
-            }
                 .foregroundColor(Color(UIColor.systemBackground))
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
@@ -99,6 +100,21 @@ struct CountdownView: View {
                         .opacity(0.75)
                 ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                     .onTapGesture{print("Tapped")}
+                VStack{
+                    Text("\(toMins(exercise_time))")
+                    Text("Exercise").font(.footnote).foregroundColor(.yellow) 
+                    Text("\(toMins(exercise_time))")
+                    Text("Workout").font(.footnote).foregroundColor(.yellow)
+                }
+                .foregroundColor(Color(UIColor.systemBackground))
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .opacity(0.75)
+                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .onTapGesture{print("Tapped")}
+            }
             Spacer(minLength: 80)
             HStack {
                 Spacer()
