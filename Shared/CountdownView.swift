@@ -40,23 +40,36 @@ struct CountdownView: View {
                     .padding(.bottom, 10)
             }
             Spacer()
-            VStack{
-                Text("\(dd(inhale)) : \(dd(hold)) : \(dd(exhale))")
+            HStack(spacing: 20){
+                VStack{
+                    Text("\(dd(inhale))")
+                        .font(.system(size: 50))
+                        .foregroundColor(.white)
+                    Text("Inhale")
+                        .foregroundColor(.yellow)
+                }
+                Text(":")
                     .font(.system(size: 50))
                     .foregroundColor(.white)
-                Text(" Inhale           Hold          Exhable")
-                    .foregroundColor(.yellow)
-                //                Text("BPS: \(bps) / \(bps)")
-                //                    .padding(.top, 5)
-                //                    .font(.title)
-                //                    .foregroundColor(Color(UIColor.systemBackground))
-                //                Text("Sets: \(sets) / \(sets)")
-                //                    .font(.title)
-                //                    .foregroundColor(Color(UIColor.systemBackground))
-                //                Text("BPS (Breaths Per Set)")
-                //                    .font(.footnote)
-                //                    .padding(.top, 5)
-                //                    .foregroundColor(Color(UIColor.systemBackground))
+                    .padding(.bottom, 30)
+                VStack{
+                    Text("\(dd(hold))")
+                        .font(.system(size: 50))
+                        .foregroundColor(.white)
+                    Text("Hold")
+                        .foregroundColor(.yellow)
+                }
+                Text(":")
+                    .font(.system(size: 50))
+                    .foregroundColor(.white)
+                    .padding(.bottom, 30)
+                VStack{
+                    Text("\(dd(exhale))")
+                        .font(.system(size: 50))
+                        .foregroundColor(.white)
+                    Text("Exhable")
+                        .foregroundColor(.yellow)
+                }
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 15)
@@ -70,7 +83,7 @@ struct CountdownView: View {
                 VStack{
                     Text("\(bps) / \(exercise.breaths_per_set)").font(.title)
                     Text("BPS").font(.footnote).foregroundColor(.yellow)
-                    Text("\(toMins(set_time))s")
+                    Text("\(toMins(set_time))")
                 }
                 VStack{
                     Text("\(sets) / \(exercise.sets)").font(.title)
@@ -86,17 +99,7 @@ struct CountdownView: View {
                         .opacity(0.75)
                 ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                     .onTapGesture{print("Tapped")}
-            VStack{
-                HStack{
-                    Text("Time: ").font(.largeTitle)
-                    VStack{
-                        Text("Set: \(set_time)s")
-                        Text("Exercise: \(exercise_time)")
-                    }
-                }
-            }
-            
-            Spacer()
+            Spacer(minLength: 80)
             HStack {
                 Spacer()
                 // Hides the 'CANCEL' button
