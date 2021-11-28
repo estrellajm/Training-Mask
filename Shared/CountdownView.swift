@@ -28,13 +28,19 @@ struct CountdownView: View {
     @State private var playsound = true
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    @State var bpsTime: Int
+    @State var setTime: Int
+    @State var exerciseTime: Int
+    @State var workoutTime: Int
+    
     var body: some View {
-        //        let time = toMins((inhale + hold + exhale) * bps * sets)
-        var set_time = ((inhale + hold + exhale) * bps)
-        var exercise_time = (((inhale + hold + exhale) * bps) * sets)
         VStack {
             Spacer()
             VStack{
+                Text("bpsTime: \(bpsTime)")
+                Text("setTime: \(setTime)")
+                Text("exerciseTime: \(exerciseTime)")
+                Text("workoutTime: \(workoutTime)")
                 Image(image).resizable().frame(width: 350, height: 200)
                 Text("\(title)").font(.title).multilineTextAlignment(.center)
                     .padding(.bottom, 10)
@@ -79,17 +85,17 @@ struct CountdownView: View {
             ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .onTapGesture{print("Tapped")}
-            HStack(spacing: 30){
+            HStack(spacing: 20){
                 HStack(spacing: 30){
                     VStack{
                         Text("\(bps) / \(exercise.breaths_per_set)").font(.title)
                         Text("BPS").font(.footnote).foregroundColor(.yellow)
-                        Text("\(toMins(set_time))")
+                        Text("\(timeFormat(bpsTime))")
                     }
                     VStack{
                         Text("\(sets) / \(exercise.sets)").font(.title)
                         Text("Sets").font(.footnote).foregroundColor(.yellow)
-                        Text("\(toMins(exercise_time))")
+                        Text("\(timeFormat(setTime))")
                     }
                 }
                 .foregroundColor(Color(UIColor.systemBackground))
@@ -98,12 +104,12 @@ struct CountdownView: View {
                 .background(
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
                         .opacity(0.75)
-                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                ).shadow(color: Color.black.opacity(0.5), radius: 10, x: 10, y: 10)
                     .onTapGesture{print("Tapped")}
                 VStack{
-                    Text("\(toMins(exercise_time))")
+                    Text("\(timeFormat(exerciseTime))")
                     Text("Exercise").font(.footnote).foregroundColor(.yellow) 
-                    Text("\(toMins(exercise_time))")
+                    Text("\(timeFormat(workoutTime))")
                     Text("Workout").font(.footnote).foregroundColor(.yellow)
                 }
                 .foregroundColor(Color(UIColor.systemBackground))
@@ -112,7 +118,7 @@ struct CountdownView: View {
                 .background(
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
                         .opacity(0.75)
-                ).shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                ).shadow(color: Color.black.opacity(0.5), radius: 10, x: 10, y: 10)
                     .onTapGesture{print("Tapped")}
             }
             Spacer(minLength: 80)
@@ -145,35 +151,9 @@ struct CountdownView: View {
                 Spacer()
             }
         }
-        .onReceive(timer) { time in
+        .onReceive(timer) {_ in
             guard isCounting && isActive else {return}
-            //            if timeRemaining > 0 {
-            //                timeRemaining -= 1
-            
-            if inhale > 0 {
-                //                if (playsound) {
-                //                    playSound("inhale")
-                //                    playsound = false
-                //                }
-                inhale -= 1
-            } else if hold > 0 {
-                //                playSound("boop")
-                playSound("ping")
-                hold -= 1
-                playsound = true
-            } else if exhale > 0 {
-                if (playsound) {
-                    playSound("exhale")
-                    playsound = false
-                }
-                exhale -= 1
-            } else {
-                reset()
-                bps -= 1
-            }
-            
-            set_time -= 1
-            exercise_time -= 1
+            timerCountdown()
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
             isActive = false
@@ -183,12 +163,11 @@ struct CountdownView: View {
         }
     }
     
-    func toMins (_ seconds : Int) -> String {
-        //        let (h,m,s) = (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
-        //        let hrs = seconds / 3600 // exercise will not come close to hours... but a consideration for the future
-        let mins = (seconds % 3600) / 60
-        let secs = (seconds % 3600) % 60
-        return "\(mins)m \(secs)s"
+    func timeFormat (_ seconds : Int) -> String {
+        let (h,m,s) = (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+        let hrs = h > 0 ? "\(h)h " : ""
+        let mins = m > 0 ? "\(m)m " : ""
+        return "\(hrs)\(mins)\(s)s"
     }
     
     func dd(_ digit: Int) -> String {
@@ -200,19 +179,78 @@ struct CountdownView: View {
         isStarted = false
     }
     
-    func reset() {
+    func timerCountdown() {
+        bpsTime -= 1
+        setTime -= 1
+        exerciseTime -= 1
+        workoutTime -= 1
+//        switch timer {
+//            case 0:
+//                print("You're just starting out")
+//
+//            case 1:
+//                print("You just released iTunes Live From SoHo")
+//
+//            case 2:
+//                print("You just released Speak Now World Tour")
+//
+//            default:
+//                print("Have you done something new?")
+//        }
+        
+        
+        if inhale > 0 {
+            inhale -= 1
+        } else if hold > 0 {
+            hold -= 1
+        } else if exhale > 1 {
+            exhale -= 1
+        } else if bps > 1 {
+            bps -= 1
+            reset("bpsTime")
+        } else if sets > 1 {
+            sets -= 1
+            reset("setTime")
+        } else {
+            stop_and_reset()
+        }
+
+    }
+
+    
+    func reset(_ val: String) {
         inhale = exercise.inhale
         hold = exercise.hold
         exhale = exercise.exhale
+        
+        if (val == "bpsTime") {
+            bpsTime = exercise.inhale + exercise.hold + exercise.exhale
+        }
+        if (val == "setTime") {
+            bps = exercise.breaths_per_set
+            bpsTime = exercise.inhale + exercise.hold + exercise.exhale
+            setTime = (exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set
+        }
+        if (val == "exerciseTime") {
+            exerciseTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * sets
+        }
     }
     
     func stop_and_reset() {
         isCounting = false
         isStarted = false
         
-        inhale = 2
-        hold = 1
-        exhale = 2
+        inhale = exercise.inhale
+        hold = exercise.hold
+        exhale = exercise.exhale
+        
+        bps = exercise.breaths_per_set
+        sets = exercise.sets
+        
+        bpsTime = (exercise.inhale + exercise.hold + exercise.exhale)
+        setTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set)
+        exerciseTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * exercise.sets
+        workoutTime = (((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * exercise.sets * 4)
     }
     
     func tap(_ state: String) {
@@ -220,7 +258,7 @@ struct CountdownView: View {
         case "Start":
             isCounting.toggle()
             isStarted.toggle()
-            playSound("inhale")
+//            playSound("inhale")
         case "Pause":
             isCounting = false
         case "Resume":
@@ -284,7 +322,20 @@ struct CountdownView: View {
     
     struct CountdownView_Previews: PreviewProvider {
         static var previews: some View {
-            CountdownView(exercise: exercise_1, title: exercise_1.title, image: exercise_1.image, inhale: exercise_1.inhale, hold: exercise_1.hold, exhale: exercise_1.exhale, bps: exercise_1.breaths_per_set, sets: exercise_1.sets)
+            CountdownView(
+                exercise: exercise_1,
+                title: exercise_1.title,
+                image: exercise_1.image,
+                inhale: exercise_1.inhale,
+                hold: exercise_1.hold,
+                exhale: exercise_1.exhale,
+                bps: exercise_1.breaths_per_set,
+                sets: exercise_1.sets,
+                bpsTime: (exercise_1.inhale + exercise_1.hold + exercise_1.exhale),
+                setTime: ((exercise_1.inhale + exercise_1.hold + exercise_1.exhale) * exercise_1.breaths_per_set),
+                exerciseTime: (((exercise_1.inhale + exercise_1.hold + exercise_1.exhale) * exercise_1.breaths_per_set) * exercise_1.sets),
+                workoutTime: (((exercise_1.inhale + exercise_1.hold + exercise_1.exhale) * exercise_1.breaths_per_set) * exercise_1.sets * 4)
+            )
         }
     }
 }
