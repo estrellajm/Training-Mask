@@ -11,27 +11,43 @@ import AVFoundation
 import AVKit
 
 struct CountdownView: View {
-    @State var exercise: Exercise
-    @State var title: String
-    //    var description: String?
-    @State var image: String
-    @State var inhale: Int
-    @State var hold: Int
-    @State var exhale: Int
-    @State var bps: Int
-    @State var sets: Int
+    @State var staticExercise: Exercise
+    @State private var title: String
+    //     private var description: String?
+    @State private var image: String
+    @State private var inhale: Int
+    @State private var hold: Int
+    @State private var exhale: Int
+    @State private var bps: Int
+    @State private var sets: Int
+    @State private var bpsTime: Int
+    @State private var setTime: Int
+    @State private var exerciseTime: Int
+    @State private var workoutTime: Int
+    
+    
+    init(exercise: Exercise) {
+        self.staticExercise = exercise
+        self.title = exercise.title
+        self.image = exercise.image
+        self.inhale = exercise.inhale
+        self.hold = exercise.hold
+        self.exhale = exercise.exhale
+        self.bps = exercise.breaths_per_set
+        self.sets = exercise.sets
+        self.bpsTime = (exercise.inhale + exercise.hold + exercise.exhale)
+        self.setTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set)
+        self.exerciseTime = (((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * exercise.sets)
+        self.workoutTime = (((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * exercise.sets * 4)
+    }
     
     @State private var isCounting = false // is actively counting
     @State private var isStarted = false // counting has started
     @State private var isActive = true // app is active
-    @State private var soundEffect: AVAudioPlayer?
+    @State private var soundEffect: AVAudioPlayer? = nil
     @State private var playsound = true
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    @State var bpsTime: Int
-    @State var setTime: Int
-    @State var exerciseTime: Int
-    @State var workoutTime: Int
+
     
     var body: some View {
         VStack {
@@ -84,12 +100,12 @@ struct CountdownView: View {
             HStack(spacing: 20){
                 HStack(spacing: 30){
                     VStack{
-                        Text("\(bps) / \(exercise.breaths_per_set)").font(.title)
+                        Text("\(bps) / \(staticExercise.breaths_per_set)").font(.title)
                         Text("BPS").font(.footnote).foregroundColor(.yellow)
                         Text("\(timeFormat(bpsTime))")
                     }
                     VStack{
-                        Text("\(sets) / \(exercise.sets)").font(.title)
+                        Text("\(sets) / \(staticExercise.sets)").font(.title)
                         Text("Sets").font(.footnote).foregroundColor(.yellow)
                         Text("\(timeFormat(setTime))")
                     }
@@ -200,20 +216,20 @@ struct CountdownView: View {
 
     
     func reset(_ val: String) {
-        inhale = exercise.inhale
-        hold = exercise.hold
-        exhale = exercise.exhale
+        inhale = staticExercise.inhale
+        hold = staticExercise.hold
+        exhale = staticExercise.exhale
         
         if (val == "bpsTime") {
-            bpsTime = exercise.inhale + exercise.hold + exercise.exhale
+            bpsTime = staticExercise.inhale + staticExercise.hold + staticExercise.exhale
         }
         if (val == "setTime") {
-            bps = exercise.breaths_per_set
-            bpsTime = exercise.inhale + exercise.hold + exercise.exhale
-            setTime = (exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set
+            bps = staticExercise.breaths_per_set
+            bpsTime = staticExercise.inhale + staticExercise.hold + staticExercise.exhale
+            setTime = (staticExercise.inhale + staticExercise.hold + staticExercise.exhale) * staticExercise.breaths_per_set
         }
         if (val == "exerciseTime") {
-            exerciseTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * sets
+            exerciseTime = ((staticExercise.inhale + staticExercise.hold + staticExercise.exhale) * staticExercise.breaths_per_set) * sets
         }
     }
     
@@ -221,17 +237,17 @@ struct CountdownView: View {
         isCounting = false
         isStarted = false
         
-        inhale = exercise.inhale
-        hold = exercise.hold
-        exhale = exercise.exhale
+        inhale = staticExercise.inhale
+        hold = staticExercise.hold
+        exhale = staticExercise.exhale
         
-        bps = exercise.breaths_per_set
-        sets = exercise.sets
+        bps = staticExercise.breaths_per_set
+        sets = staticExercise.sets
         
-        bpsTime = (exercise.inhale + exercise.hold + exercise.exhale)
-        setTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set)
-        exerciseTime = ((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * exercise.sets
-        workoutTime = (((exercise.inhale + exercise.hold + exercise.exhale) * exercise.breaths_per_set) * exercise.sets * 4)
+        bpsTime = (staticExercise.inhale + staticExercise.hold + staticExercise.exhale)
+        setTime = ((staticExercise.inhale + staticExercise.hold + staticExercise.exhale) * staticExercise.breaths_per_set)
+        exerciseTime = ((staticExercise.inhale + staticExercise.hold + staticExercise.exhale) * staticExercise.breaths_per_set) * staticExercise.sets
+        workoutTime = (((staticExercise.inhale + staticExercise.hold + staticExercise.exhale) * staticExercise.breaths_per_set) * staticExercise.sets * 4)
     }
     
     func tap(_ state: String) {
@@ -302,20 +318,11 @@ struct CountdownView: View {
     }
     
     struct CountdownView_Previews: PreviewProvider {
+        
+        
         static var previews: some View {
             CountdownView(
-                exercise: exercise_1,
-                title: exercise_1.title,
-                image: exercise_1.image,
-                inhale: exercise_1.inhale,
-                hold: exercise_1.hold,
-                exhale: exercise_1.exhale,
-                bps: exercise_1.breaths_per_set,
-                sets: exercise_1.sets,
-                bpsTime: (exercise_1.inhale + exercise_1.hold + exercise_1.exhale),
-                setTime: ((exercise_1.inhale + exercise_1.hold + exercise_1.exhale) * exercise_1.breaths_per_set),
-                exerciseTime: (((exercise_1.inhale + exercise_1.hold + exercise_1.exhale) * exercise_1.breaths_per_set) * exercise_1.sets),
-                workoutTime: (((exercise_1.inhale + exercise_1.hold + exercise_1.exhale) * exercise_1.breaths_per_set) * exercise_1.sets * 4)
+                exercise: exercise_1
             )
         }
     }

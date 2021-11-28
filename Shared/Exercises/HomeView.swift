@@ -32,34 +32,34 @@ struct HomeView: View {
                             }
                         }
                     }
-                    Text("\(dd(inhale)) : \(dd(hold)) : \(dd(exhale))").font(.system(size: 70))
-                    Image(systemName: "clear")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50, height: 50)
-                        .opacity(isCounting ? 0.2 : 1)
-//                        .scaleEffect(isCounting ? 2 : 1)
-                        .rotationEffect(isCounting ? .degrees(90) : .degrees(0))
-                        .animation(Animation.easeOut, value: isCounting)
-                        .padding()
-                    
-                    Button(action: {
-                        self.inhale = 04
-                    }) {
-                        Text("update")
-                    }
-                    Button {self.isCounting.toggle()} label: {
-                        Text("Toggle Counter")
-                    }
-                    
-                    
-                    Button(action: {
-                        print("Pressed")
-                    }) {
-                        Text("Cancellable")
-                    }
-//                    .buttonStyle(CancellableButtonStyle())
-                    .padding()
+//                    Text("\(dd(inhale)) : \(dd(hold)) : \(dd(exhale))").font(.system(size: 70))
+//                    Image(systemName: "clear")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 50, height: 50)
+//                        .opacity(isCounting ? 0.2 : 1)
+////                        .scaleEffect(isCounting ? 2 : 1)
+//                        .rotationEffect(isCounting ? .degrees(90) : .degrees(0))
+//                        .animation(Animation.easeOut, value: isCounting)
+//                        .padding()
+//
+//                    Button(action: {
+//                        self.inhale = 04
+//                    }) {
+//                        Text("update")
+//                    }
+//                    Button {self.isCounting.toggle()} label: {
+//                        Text("Toggle Counter")
+//                    }
+//
+//
+//                    Button(action: {
+//                        print("Pressed")
+//                    }) {
+//                        Text("Cancellable")
+//                    }
+////                    .buttonStyle(CancellableButtonStyle())
+//                    .padding()
                 }
             }
             

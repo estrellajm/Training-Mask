@@ -12,7 +12,7 @@ import AVKit
 
 struct ContentView: View {
     
-    @State var showPicker = true
+    @State var showPicker = false
     
     var body: some View {
         //        Color(UIColor.systemIndigo).ignoresSafeArea(.all, edges: .bottom)
@@ -87,26 +87,6 @@ struct Menu : View {
             
                 Spacer()
         }
-//        VStack{
-//            Spacer()
-//            ZStack {
-//                HStack{
-//                    Picker(selection: self.$inhale, label: Text("")) {
-//                        ForEach(0 ..< self.seconds.count) { index in
-//                            Text("\(dd(self.seconds[index]))").tag(index)
-//                        }
-//                    }
-//                    .pickerStyle(.wheel)
-//                    .frame(minWidth: 0, maxWidth: .infinity)
-//                }
-//                .padding(.bottom, 30)
-//                .background(Color(UIColor.systemBackground))
-//                .cornerRadius(15)
-//            }
-//            .padding()
-//            .frame(width: 200, alignment: .center)
-//            Spacer()
-//        }
     }
 }
 
