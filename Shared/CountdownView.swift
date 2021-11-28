@@ -37,10 +37,6 @@ struct CountdownView: View {
         VStack {
             Spacer()
             VStack{
-                Text("bpsTime: \(bpsTime)")
-                Text("setTime: \(setTime)")
-                Text("exerciseTime: \(exerciseTime)")
-                Text("workoutTime: \(workoutTime)")
                 Image(image).resizable().frame(width: 350, height: 200)
                 Text("\(title)").font(.title).multilineTextAlignment(.center)
                     .padding(.bottom, 10)
@@ -184,20 +180,6 @@ struct CountdownView: View {
         setTime -= 1
         exerciseTime -= 1
         workoutTime -= 1
-//        switch timer {
-//            case 0:
-//                print("You're just starting out")
-//
-//            case 1:
-//                print("You just released iTunes Live From SoHo")
-//
-//            case 2:
-//                print("You just released Speak Now World Tour")
-//
-//            default:
-//                print("Have you done something new?")
-//        }
-        
         
         if inhale > 0 {
             inhale -= 1
@@ -214,7 +196,6 @@ struct CountdownView: View {
         } else {
             stop_and_reset()
         }
-
     }
 
     
