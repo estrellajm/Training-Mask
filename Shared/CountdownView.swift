@@ -59,7 +59,7 @@ struct CountdownView: View {
         VStack {
             Spacer()
             VStack{
-                Image(image).resizable().frame(width: 350, height: 200)
+                Image(image).resizable().aspectRatio(contentMode: .fit).frame(height: 200)
                 Text("\(title)").font(.title).multilineTextAlignment(.center)
                     .padding(.bottom, 10)
             }
@@ -328,7 +328,7 @@ struct CountdownView: View {
     struct CountdownView_Previews: PreviewProvider {
         static var previews: some View {
             CountdownView(
-                exercise: basicExercises[0]
+                exercise: basicExercises[7]
             )
         }
     }

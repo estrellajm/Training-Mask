@@ -8,120 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		CB01BFD2274FD42F007977D9 /* RainbowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */; };
-		CB01BFD3274FD42F007977D9 /* RainbowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD1274FD42F007977D9 /* RainbowCircle.swift */; };
 		CB01BFD5274FDBFA007977D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD4274FDBFA007977D9 /* Constants.swift */; };
-		CB01BFD6274FDBFA007977D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD4274FDBFA007977D9 /* Constants.swift */; };
 		CB01BFD8274FDC05007977D9 /* StandardExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD7274FDC05007977D9 /* StandardExercise.swift */; };
-		CB01BFD9274FDC05007977D9 /* StandardExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFD7274FDC05007977D9 /* StandardExercise.swift */; };
 		CB01BFDB274FDC0F007977D9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDA274FDC0F007977D9 /* Exercise.swift */; };
-		CB01BFDC274FDC0F007977D9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDA274FDC0F007977D9 /* Exercise.swift */; };
 		CB01BFDE274FDC77007977D9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDD274FDC77007977D9 /* HomeVM.swift */; };
-		CB01BFDF274FDC77007977D9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFDD274FDC77007977D9 /* HomeVM.swift */; };
 		CB01BFE127500983007977D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFE027500983007977D9 /* HomeView.swift */; };
-		CB01BFE227500983007977D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01BFE027500983007977D9 /* HomeView.swift */; };
-		CB2C48242753DF8F0067884A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2C48232753DF8F0067884A /* Assets.xcassets */; };
-		CB2C482A2753DF8F0067884A /* Training Mask Countdown WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB2C48292753DF8F0067884A /* Training Mask Countdown WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CB2C482F2753DF8F0067884A /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C482E2753DF8F0067884A /* CountdownApp.swift */; };
-		CB2C48312753DF8F0067884A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48302753DF8F0067884A /* ContentView.swift */; };
-		CB2C48332753DF8F0067884A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48322753DF8F0067884A /* NotificationController.swift */; };
-		CB2C48352753DF8F0067884A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48342753DF8F0067884A /* NotificationView.swift */; };
-		CB2C48372753DF8F0067884A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48362753DF8F0067884A /* ComplicationController.swift */; };
-		CB2C48392753DF8F0067884A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2C48382753DF8F0067884A /* Assets.xcassets */; };
-		CB2C483C2753DF8F0067884A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2C483B2753DF8F0067884A /* Preview Assets.xcassets */; };
-		CB2C48482753DF8F0067884A /* Training_Mask_CountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48472753DF8F0067884A /* Training_Mask_CountdownTests.swift */; };
-		CB2C48522753DF8F0067884A /* Training_Mask_CountdownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48512753DF8F0067884A /* Training_Mask_CountdownUITests.swift */; };
-		CB2C48542753DF8F0067884A /* Training_Mask_CountdownUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C48532753DF8F0067884A /* Training_Mask_CountdownUITestsLaunchTests.swift */; };
-		CB2C48572753DF8F0067884A /* Training Mask Countdown.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CB2C48212753DF8E0067884A /* Training Mask Countdown.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CB4E7B0C2753776F00EFCE91 /* PopupNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E7B0B2753776F00EFCE91 /* PopupNav.swift */; };
-		CB4E7B0D2753776F00EFCE91 /* PopupNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E7B0B2753776F00EFCE91 /* PopupNav.swift */; };
 		CB565CA0274E62800096C272 /* exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9E274E62360096C272 /* exhale.m4a */; };
 		CB565CA1274E62800096C272 /* inhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9F274E62360096C272 /* inhale.m4a */; };
-		CB565CA2274E62870096C272 /* exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9E274E62360096C272 /* exhale.m4a */; };
-		CB565CA3274E62870096C272 /* inhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565C9F274E62360096C272 /* inhale.m4a */; };
 		CB565CA5274E681F0096C272 /* boop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565CA4274E681F0096C272 /* boop.m4a */; };
-		CB565CA6274E681F0096C272 /* boop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB565CA4274E681F0096C272 /* boop.m4a */; };
 		CB6D985E2750BD0800619B3E /* ping.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB6D985D2750BD0800619B3E /* ping.m4a */; };
-		CB6D985F2750BD0800619B3E /* ping.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CB6D985D2750BD0800619B3E /* ping.m4a */; };
-		CB842976274D5BC70098021B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842975274D5BC70098021B /* Tests_iOS.swift */; };
-		CB842978274D5BC70098021B /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842977274D5BC70098021B /* Tests_iOSLaunchTests.swift */; };
-		CB842982274D5BC70098021B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842981274D5BC70098021B /* Tests_macOS.swift */; };
-		CB842984274D5BC70098021B /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB842983274D5BC70098021B /* Tests_macOSLaunchTests.swift */; };
 		CB842985274D5BC70098021B /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295D274D5BC70098021B /* CountdownApp.swift */; };
-		CB842986274D5BC70098021B /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295D274D5BC70098021B /* CountdownApp.swift */; };
 		CB842987274D5BC70098021B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295E274D5BC70098021B /* ContentView.swift */; };
-		CB842988274D5BC70098021B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295E274D5BC70098021B /* ContentView.swift */; };
 		CB842989274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
-		CB84298A274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
 		CBC3F2F32750DBE800255869 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3F2F22750DBE800255869 /* Button.swift */; };
-		CBC3F2F42750DBE800255869 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3F2F22750DBE800255869 /* Button.swift */; };
-		CBDA3804275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
 		CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CB2C482B2753DF8F0067884A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB842958274D5BC70098021B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB2C48282753DF8F0067884A;
-			remoteInfo = "Training Mask Countdown WatchKit Extension";
-		};
-		CB2C48442753DF8F0067884A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB842958274D5BC70098021B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB2C48282753DF8F0067884A;
-			remoteInfo = "Training Mask Countdown WatchKit Extension";
-		};
-		CB2C484E2753DF8F0067884A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB842958274D5BC70098021B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB2C48202753DF8E0067884A;
-			remoteInfo = "Training Mask Countdown";
-		};
-		CB2C48552753DF8F0067884A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB842958274D5BC70098021B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB2C48202753DF8E0067884A;
-			remoteInfo = "Training Mask Countdown";
-		};
-		CB842972274D5BC70098021B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB842958274D5BC70098021B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB842963274D5BC70098021B;
-			remoteInfo = "Countdown (iOS)";
-		};
-		CB84297E274D5BC70098021B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB842958274D5BC70098021B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB842969274D5BC70098021B;
-			remoteInfo = "Countdown (macOS)";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		CB2C485B2753DF8F0067884A /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				CB2C482A2753DF8F0067884A /* Training Mask Countdown WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB2C485F2753DF8F0067884A /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				CB2C48572753DF8F0067884A /* Training Mask Countdown.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,23 +45,6 @@
 		CB01BFDA274FDC0F007977D9 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		CB01BFDD274FDC77007977D9 /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		CB01BFE027500983007977D9 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CB2C48212753DF8E0067884A /* Training Mask Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Mask Countdown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB2C48232753DF8F0067884A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB2C48292753DF8F0067884A /* Training Mask Countdown WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Training Mask Countdown WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB2C482E2753DF8F0067884A /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
-		CB2C48302753DF8F0067884A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CB2C48322753DF8F0067884A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		CB2C48342753DF8F0067884A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		CB2C48362753DF8F0067884A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		CB2C48382753DF8F0067884A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB2C483B2753DF8F0067884A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CB2C483D2753DF8F0067884A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB2C483E2753DF8F0067884A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		CB2C48432753DF8F0067884A /* Training Mask CountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Training Mask CountdownTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB2C48472753DF8F0067884A /* Training_Mask_CountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_Mask_CountdownTests.swift; sourceTree = "<group>"; };
-		CB2C484D2753DF8F0067884A /* Training Mask CountdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Training Mask CountdownUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB2C48512753DF8F0067884A /* Training_Mask_CountdownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_Mask_CountdownUITests.swift; sourceTree = "<group>"; };
-		CB2C48532753DF8F0067884A /* Training_Mask_CountdownUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training_Mask_CountdownUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB4E7B0B2753776F00EFCE91 /* PopupNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupNav.swift; sourceTree = "<group>"; };
 		CB565C9E274E62360096C272 /* exhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = exhale.m4a; sourceTree = "<group>"; };
 		CB565C9F274E62360096C272 /* inhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = inhale.m4a; sourceTree = "<group>"; };
@@ -161,62 +54,12 @@
 		CB84295E274D5BC70098021B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB84295F274D5BC70098021B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB842964274D5BC70098021B /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB84296A274D5BC70098021B /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB84296C274D5BC70098021B /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		CB842971274D5BC70098021B /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB842975274D5BC70098021B /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		CB842977274D5BC70098021B /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		CB84297D274D5BC70098021B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB842981274D5BC70098021B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		CB842983274D5BC70098021B /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		CBC3F2F22750DBE800255869 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CBDA3803275049E7007F3AA8 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CB2C48262753DF8F0067884A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C48402753DF8F0067884A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C484A2753DF8F0067884A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB842961274D5BC70098021B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB842967274D5BC70098021B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB84296E274D5BC70098021B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB84297A274D5BC70098021B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,55 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB2C48222753DF8E0067884A /* Training Mask Countdown */ = {
-			isa = PBXGroup;
-			children = (
-				CB2C48232753DF8F0067884A /* Assets.xcassets */,
-			);
-			path = "Training Mask Countdown";
-			sourceTree = "<group>";
-		};
-		CB2C482D2753DF8F0067884A /* Training Mask Countdown WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				CB2C482E2753DF8F0067884A /* CountdownApp.swift */,
-				CB2C48302753DF8F0067884A /* ContentView.swift */,
-				CB2C48322753DF8F0067884A /* NotificationController.swift */,
-				CB2C48342753DF8F0067884A /* NotificationView.swift */,
-				CB2C48362753DF8F0067884A /* ComplicationController.swift */,
-				CB2C48382753DF8F0067884A /* Assets.xcassets */,
-				CB2C483D2753DF8F0067884A /* Info.plist */,
-				CB2C483E2753DF8F0067884A /* PushNotificationPayload.apns */,
-				CB2C483A2753DF8F0067884A /* Preview Content */,
-			);
-			path = "Training Mask Countdown WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		CB2C483A2753DF8F0067884A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CB2C483B2753DF8F0067884A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CB2C48462753DF8F0067884A /* Training Mask CountdownTests */ = {
-			isa = PBXGroup;
-			children = (
-				CB2C48472753DF8F0067884A /* Training_Mask_CountdownTests.swift */,
-			);
-			path = "Training Mask CountdownTests";
-			sourceTree = "<group>";
-		};
-		CB2C48502753DF8F0067884A /* Training Mask CountdownUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CB2C48512753DF8F0067884A /* Training_Mask_CountdownUITests.swift */,
-				CB2C48532753DF8F0067884A /* Training_Mask_CountdownUITestsLaunchTests.swift */,
-			);
-			path = "Training Mask CountdownUITests";
-			sourceTree = "<group>";
-		};
 		CB565C9D274E62160096C272 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,13 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				CB84295C274D5BC70098021B /* Shared */,
-				CB84296B274D5BC70098021B /* macOS */,
-				CB842974274D5BC70098021B /* Tests iOS */,
-				CB842980274D5BC70098021B /* Tests macOS */,
-				CB2C48222753DF8E0067884A /* Training Mask Countdown */,
-				CB2C482D2753DF8F0067884A /* Training Mask Countdown WatchKit Extension */,
-				CB2C48462753DF8F0067884A /* Training Mask CountdownTests */,
-				CB2C48502753DF8F0067884A /* Training Mask CountdownUITests */,
 				CB842965274D5BC70098021B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -321,41 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				CB842964274D5BC70098021B /* Countdown.app */,
-				CB84296A274D5BC70098021B /* Countdown.app */,
-				CB842971274D5BC70098021B /* Tests iOS.xctest */,
-				CB84297D274D5BC70098021B /* Tests macOS.xctest */,
-				CB2C48212753DF8E0067884A /* Training Mask Countdown.app */,
-				CB2C48292753DF8F0067884A /* Training Mask Countdown WatchKit Extension.appex */,
-				CB2C48432753DF8F0067884A /* Training Mask CountdownTests.xctest */,
-				CB2C484D2753DF8F0067884A /* Training Mask CountdownUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CB84296B274D5BC70098021B /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				CB84296C274D5BC70098021B /* macOS.entitlements */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		CB842974274D5BC70098021B /* Tests iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CB842975274D5BC70098021B /* Tests_iOS.swift */,
-				CB842977274D5BC70098021B /* Tests_iOSLaunchTests.swift */,
-			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		CB842980274D5BC70098021B /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				CB842981274D5BC70098021B /* Tests_macOS.swift */,
-				CB842983274D5BC70098021B /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		CBDA380127503EBB007F3AA8 /* misc */ = {
@@ -381,76 +135,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB2C48202753DF8E0067884A /* Training Mask Countdown */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB2C485C2753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask Countdown" */;
-			buildPhases = (
-				CB2C481F2753DF8E0067884A /* Resources */,
-				CB2C485B2753DF8F0067884A /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB2C482C2753DF8F0067884A /* PBXTargetDependency */,
-			);
-			name = "Training Mask Countdown";
-			productName = "Training Mask Countdown";
-			productReference = CB2C48212753DF8E0067884A /* Training Mask Countdown.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		CB2C48282753DF8F0067884A /* Training Mask Countdown WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB2C48582753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask Countdown WatchKit Extension" */;
-			buildPhases = (
-				CB2C48252753DF8F0067884A /* Sources */,
-				CB2C48262753DF8F0067884A /* Frameworks */,
-				CB2C48272753DF8F0067884A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Training Mask Countdown WatchKit Extension";
-			productName = "Training Mask Countdown WatchKit Extension";
-			productReference = CB2C48292753DF8F0067884A /* Training Mask Countdown WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		CB2C48422753DF8F0067884A /* Training Mask CountdownTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB2C48602753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask CountdownTests" */;
-			buildPhases = (
-				CB2C483F2753DF8F0067884A /* Sources */,
-				CB2C48402753DF8F0067884A /* Frameworks */,
-				CB2C48412753DF8F0067884A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB2C48452753DF8F0067884A /* PBXTargetDependency */,
-			);
-			name = "Training Mask CountdownTests";
-			productName = "Training Mask CountdownTests";
-			productReference = CB2C48432753DF8F0067884A /* Training Mask CountdownTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CB2C484C2753DF8F0067884A /* Training Mask CountdownUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB2C48632753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask CountdownUITests" */;
-			buildPhases = (
-				CB2C48492753DF8F0067884A /* Sources */,
-				CB2C484A2753DF8F0067884A /* Frameworks */,
-				CB2C484B2753DF8F0067884A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB2C484F2753DF8F0067884A /* PBXTargetDependency */,
-			);
-			name = "Training Mask CountdownUITests";
-			productName = "Training Mask CountdownUITests";
-			productReference = CB2C484D2753DF8F0067884A /* Training Mask CountdownUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		CB842963274D5BC70098021B /* Countdown (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB84298D274D5BC70098021B /* Build configuration list for PBXNativeTarget "Countdown (iOS)" */;
@@ -463,65 +147,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				CB2C48562753DF8F0067884A /* PBXTargetDependency */,
 			);
 			name = "Countdown (iOS)";
 			productName = "Countdown (iOS)";
 			productReference = CB842964274D5BC70098021B /* Countdown.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CB842969274D5BC70098021B /* Countdown (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB842990274D5BC70098021B /* Build configuration list for PBXNativeTarget "Countdown (macOS)" */;
-			buildPhases = (
-				CB842966274D5BC70098021B /* Sources */,
-				CB842967274D5BC70098021B /* Frameworks */,
-				CB842968274D5BC70098021B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Countdown (macOS)";
-			productName = "Countdown (macOS)";
-			productReference = CB84296A274D5BC70098021B /* Countdown.app */;
-			productType = "com.apple.product-type.application";
-		};
-		CB842970274D5BC70098021B /* Tests iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB842993274D5BC70098021B /* Build configuration list for PBXNativeTarget "Tests iOS" */;
-			buildPhases = (
-				CB84296D274D5BC70098021B /* Sources */,
-				CB84296E274D5BC70098021B /* Frameworks */,
-				CB84296F274D5BC70098021B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB842973274D5BC70098021B /* PBXTargetDependency */,
-			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = CB842971274D5BC70098021B /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		CB84297C274D5BC70098021B /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB842996274D5BC70098021B /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				CB842979274D5BC70098021B /* Sources */,
-				CB84297A274D5BC70098021B /* Frameworks */,
-				CB84297B274D5BC70098021B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB84297F274D5BC70098021B /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = CB84297D274D5BC70098021B /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -533,33 +163,8 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					CB2C48202753DF8E0067884A = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					CB2C48282753DF8F0067884A = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					CB2C48422753DF8F0067884A = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = CB2C48282753DF8F0067884A;
-					};
-					CB2C484C2753DF8F0067884A = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = CB2C48202753DF8E0067884A;
-					};
 					CB842963274D5BC70098021B = {
 						CreatedOnToolsVersion = 13.1;
-					};
-					CB842969274D5BC70098021B = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					CB842970274D5BC70098021B = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = CB842963274D5BC70098021B;
-					};
-					CB84297C274D5BC70098021B = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = CB842969274D5BC70098021B;
 					};
 				};
 			};
@@ -577,49 +182,11 @@
 			projectRoot = "";
 			targets = (
 				CB842963274D5BC70098021B /* Countdown (iOS) */,
-				CB842969274D5BC70098021B /* Countdown (macOS) */,
-				CB842970274D5BC70098021B /* Tests iOS */,
-				CB84297C274D5BC70098021B /* Tests macOS */,
-				CB2C48202753DF8E0067884A /* Training Mask Countdown */,
-				CB2C48282753DF8F0067884A /* Training Mask Countdown WatchKit Extension */,
-				CB2C48422753DF8F0067884A /* Training Mask CountdownTests */,
-				CB2C484C2753DF8F0067884A /* Training Mask CountdownUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CB2C481F2753DF8E0067884A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB2C48242753DF8F0067884A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C48272753DF8F0067884A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB2C483C2753DF8F0067884A /* Preview Assets.xcassets in Resources */,
-				CB2C48392753DF8F0067884A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C48412753DF8F0067884A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C484B2753DF8F0067884A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB842962274D5BC70098021B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -632,64 +199,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB842968274D5BC70098021B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB565CA6274E681F0096C272 /* boop.m4a in Resources */,
-				CB565CA2274E62870096C272 /* exhale.m4a in Resources */,
-				CB565CA3274E62870096C272 /* inhale.m4a in Resources */,
-				CB6D985F2750BD0800619B3E /* ping.m4a in Resources */,
-				CB84298A274D5BC70098021B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB84296F274D5BC70098021B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB84297B274D5BC70098021B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CB2C48252753DF8F0067884A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB2C48332753DF8F0067884A /* NotificationController.swift in Sources */,
-				CB2C48312753DF8F0067884A /* ContentView.swift in Sources */,
-				CB2C48372753DF8F0067884A /* ComplicationController.swift in Sources */,
-				CB2C482F2753DF8F0067884A /* CountdownApp.swift in Sources */,
-				CB2C48352753DF8F0067884A /* NotificationView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C483F2753DF8F0067884A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB2C48482753DF8F0067884A /* Training_Mask_CountdownTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB2C48492753DF8F0067884A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB2C48542753DF8F0067884A /* Training_Mask_CountdownUITestsLaunchTests.swift in Sources */,
-				CB2C48522753DF8F0067884A /* Training_Mask_CountdownUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB842960274D5BC70098021B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -708,296 +220,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB842966274D5BC70098021B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB842988274D5BC70098021B /* ContentView.swift in Sources */,
-				CB842986274D5BC70098021B /* CountdownApp.swift in Sources */,
-				CB01BFDF274FDC77007977D9 /* HomeVM.swift in Sources */,
-				CB01BFD3274FD42F007977D9 /* RainbowCircle.swift in Sources */,
-				CB01BFD9274FDC05007977D9 /* StandardExercise.swift in Sources */,
-				CBC3F2F42750DBE800255869 /* Button.swift in Sources */,
-				CB01BFE227500983007977D9 /* HomeView.swift in Sources */,
-				CB01BFD6274FDBFA007977D9 /* Constants.swift in Sources */,
-				CBDA3804275049E7007F3AA8 /* CountdownView.swift in Sources */,
-				CB4E7B0D2753776F00EFCE91 /* PopupNav.swift in Sources */,
-				CB01BFDC274FDC0F007977D9 /* Exercise.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB84296D274D5BC70098021B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB842978274D5BC70098021B /* Tests_iOSLaunchTests.swift in Sources */,
-				CB842976274D5BC70098021B /* Tests_iOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB842979274D5BC70098021B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB842984274D5BC70098021B /* Tests_macOSLaunchTests.swift in Sources */,
-				CB842982274D5BC70098021B /* Tests_macOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		CB2C482C2753DF8F0067884A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB2C48282753DF8F0067884A /* Training Mask Countdown WatchKit Extension */;
-			targetProxy = CB2C482B2753DF8F0067884A /* PBXContainerItemProxy */;
-		};
-		CB2C48452753DF8F0067884A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB2C48282753DF8F0067884A /* Training Mask Countdown WatchKit Extension */;
-			targetProxy = CB2C48442753DF8F0067884A /* PBXContainerItemProxy */;
-		};
-		CB2C484F2753DF8F0067884A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB2C48202753DF8E0067884A /* Training Mask Countdown */;
-			targetProxy = CB2C484E2753DF8F0067884A /* PBXContainerItemProxy */;
-		};
-		CB2C48562753DF8F0067884A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB2C48202753DF8E0067884A /* Training Mask Countdown */;
-			targetProxy = CB2C48552753DF8F0067884A /* PBXContainerItemProxy */;
-		};
-		CB842973274D5BC70098021B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB842963274D5BC70098021B /* Countdown (iOS) */;
-			targetProxy = CB842972274D5BC70098021B /* PBXContainerItemProxy */;
-		};
-		CB84297F274D5BC70098021B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB842969274D5BC70098021B /* Countdown (macOS) */;
-			targetProxy = CB84297E274D5BC70098021B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		CB2C48592753DF8F0067884A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Training Mask Countdown WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = H66Q85635B;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Training Mask Countdown WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Training Mask Countdown WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.estrella.Countdown.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		CB2C485A2753DF8F0067884A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Training Mask Countdown WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = H66Q85635B;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Training Mask Countdown WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Training Mask Countdown WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.estrella.Countdown.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
-		CB2C485D2753DF8F0067884A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z4T623QY89;
-				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = Training_Mask_Countdown_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Training Mask Countdown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.estrella.Countdown;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.estrella.Countdown.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		CB2C485E2753DF8F0067884A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z4T623QY89;
-				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = Training_Mask_Countdown_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Training Mask Countdown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.estrella.Countdown;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.estrella.Countdown.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
-		CB2C48612753DF8F0067884A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Countdown.Training-Mask-CountdownTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Training Mask Countdown WatchKit Extension.appex/Training Mask Countdown WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		CB2C48622753DF8F0067884A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Countdown.Training-Mask-CountdownTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Training Mask Countdown WatchKit Extension.appex/Training Mask Countdown WatchKit Extension";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
-		CB2C48642753DF8F0067884A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Countdown.Training-Mask-CountdownUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Training Mask Countdown";
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		CB2C48652753DF8F0067884A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Countdown.Training-Mask-CountdownUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Training Mask Countdown";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
 		CB84298B274D5BC70098021B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1118,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z4T623QY89;
+				DEVELOPMENT_TEAM = MZS84X273L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Countdown--iOS--Info.plist";
@@ -1150,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z4T623QY89;
+				DEVELOPMENT_TEAM = MZS84X273L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Countdown--iOS--Info.plist";
@@ -1176,202 +401,9 @@
 			};
 			name = Release;
 		};
-		CB842991274D5BC70098021B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.estrella.Countdown;
-				PRODUCT_NAME = Countdown;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		CB842992274D5BC70098021B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.estrella.Countdown;
-				PRODUCT_NAME = Countdown;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		CB842994274D5BC70098021B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Countdown (iOS)";
-			};
-			name = Debug;
-		};
-		CB842995274D5BC70098021B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Countdown (iOS)";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CB842997274D5BC70098021B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Countdown (macOS)";
-			};
-			name = Debug;
-		};
-		CB842998274D5BC70098021B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H66Q85635B;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.estrella.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Countdown (macOS)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB2C48582753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask Countdown WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB2C48592753DF8F0067884A /* Debug */,
-				CB2C485A2753DF8F0067884A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB2C485C2753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask Countdown" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB2C485D2753DF8F0067884A /* Debug */,
-				CB2C485E2753DF8F0067884A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB2C48602753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask CountdownTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB2C48612753DF8F0067884A /* Debug */,
-				CB2C48622753DF8F0067884A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB2C48632753DF8F0067884A /* Build configuration list for PBXNativeTarget "Training Mask CountdownUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB2C48642753DF8F0067884A /* Debug */,
-				CB2C48652753DF8F0067884A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CB84295B274D5BC70098021B /* Build configuration list for PBXProject "Countdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1386,33 +418,6 @@
 			buildConfigurations = (
 				CB84298E274D5BC70098021B /* Debug */,
 				CB84298F274D5BC70098021B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB842990274D5BC70098021B /* Build configuration list for PBXNativeTarget "Countdown (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB842991274D5BC70098021B /* Debug */,
-				CB842992274D5BC70098021B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB842993274D5BC70098021B /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB842994274D5BC70098021B /* Debug */,
-				CB842995274D5BC70098021B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB842996274D5BC70098021B /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB842997274D5BC70098021B /* Debug */,
-				CB842998274D5BC70098021B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
