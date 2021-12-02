@@ -51,7 +51,7 @@ struct CountdownView: View {
     @State private var isStarted = false // counting has started
     @State private var isActive = true // app is active
     @State private var soundEffect: AVAudioPlayer? = nil
-    @State private var playsound = true
+    @State private var playsoundActive = true
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     
@@ -208,8 +208,14 @@ struct CountdownView: View {
         if inhale > 0 {
             inhale -= 1
         } else if hold > 0 {
+            playsoundActive = true
             hold -= 1
+            playSound("boop")
         } else if exhale > 1 {
+            if (playsoundActive) {
+                playSound("exhale")
+                playsoundActive.toggle()
+            }
             exhale -= 1
         } else if bps > 1 {
             bps -= 1
@@ -222,13 +228,13 @@ struct CountdownView: View {
         }
     }
 
-    
     func reset(_ val: String) {
         inhale = staticExercise.inhale
         hold = staticExercise.hold
         exhale = staticExercise.exhale
         
         if (val == "bpsTime") {
+            playSound("inhale")
             bpsTime = staticExercise.inhale + staticExercise.hold + staticExercise.exhale
         }
         if (val == "setTime") {
@@ -263,7 +269,7 @@ struct CountdownView: View {
         case "Start":
             isCounting.toggle()
             isStarted.toggle()
-//            playSound("inhale")
+            playSound("inhale")
         case "Pause":
             isCounting = false
         case "Resume":

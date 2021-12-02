@@ -19,12 +19,6 @@ struct ContentView: View {
                 }
             }
         }
-//        LazyVStack {
-//        }
-//        ZStack {
-//            ScrollView{
-//            }
-//        }
     }
 }
 
