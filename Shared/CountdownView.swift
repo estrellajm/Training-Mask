@@ -10,6 +10,12 @@ import Foundation
 import AVFoundation
 import AVKit
 
+extension LinearGradient {
+    init(_ colors: Color...) {
+        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
 struct CountdownView: View {
     @State var staticExercise: Exercise
     @State private var title: String
@@ -89,6 +95,7 @@ struct CountdownView: View {
                         .foregroundColor(.yellow)
                 }
             }
+            .frame(width: 300)
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
             .background(
@@ -121,8 +128,8 @@ struct CountdownView: View {
                 VStack{
                     Text("\(timeFormat(exerciseTime))")
                     Text("Exercise").font(.footnote).foregroundColor(.yellow) 
-                    Text("\(timeFormat(workoutTime))")
-                    Text("Workout").font(.footnote).foregroundColor(.yellow)
+//                    Text("\(timeFormat(workoutTime))")
+//                    Text("Workout").font(.footnote).foregroundColor(.yellow)
                 }
                 .foregroundColor(Color(UIColor.systemBackground))
                 .padding(.horizontal, 20)
@@ -318,18 +325,10 @@ struct CountdownView: View {
     }
     
     struct CountdownView_Previews: PreviewProvider {
-        
-        
         static var previews: some View {
             CountdownView(
-                exercise: exercise_1
+                exercise: basicExercises[0]
             )
         }
-    }
-}
-
-extension LinearGradient {
-    init(_ colors: Color...) {
-        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }

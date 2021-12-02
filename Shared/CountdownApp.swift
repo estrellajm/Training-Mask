@@ -13,7 +13,7 @@ struct CountdownApp: App {
         WindowGroup {
 //            ContentView()
             CountdownView(
-                exercise: exercise_1
+                exercise: basicExercises[0]
             )
         }
     }

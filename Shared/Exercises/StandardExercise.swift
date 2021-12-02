@@ -29,6 +29,6 @@ struct StandardExercise: View {
 
 struct StandardExercise_Previews: PreviewProvider {
     static var previews: some View {
-        StandardExercise(exercise: exercise_1)
+        StandardExercise(exercise: basicExercises[0])
     }
 }

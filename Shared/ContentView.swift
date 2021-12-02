@@ -2,57 +2,38 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by Jose Estrella on 11/23/21.
+//  Created by Jose Estrella on 11/28/21.
 //
 
 import SwiftUI
-import Foundation
-import AVFoundation
-import AVKit
 
-struct ContentView: View {
-    
-    @State var showPicker = false
+struct ResultView: View {
+    var choice: String
     
     var body: some View {
-        //        Color(UIColor.systemIndigo).ignoresSafeArea(.all, edges: .bottom)
-        ZStack{
-            NavigationView{
-                Text("Add Something")
-                    .navigationBarTitle("Home", displayMode: .inline)
-                    .navigationBarItems(leading:
-                                            Image("bg")
-                                            .resizable()
-                                            .frame(width: 30, height: 30)
-                                            .clipShape(Circle()),
-                                        trailing:
-                                            Button(action: {
-                        withAnimation{ self.showPicker.toggle() }
-                    },
-                                                   label: {
-                        Text("Testsss").onTapGesture {
-                            withAnimation {
-                                self.showPicker.toggle()
-                            }
-                        }
-                    })
-                    )
-            }
-            
-            if self.showPicker{
-                GeometryReader{_ in
-                    Menu()
-                }.background(Color.black.opacity(0.65)
-                    .edgesIgnoringSafeArea(.all)
-                    .onTapGesture {
-                    withAnimation {
-                        self.showPicker.toggle()
-                    }
-                })
+        Text("You chose \(choice)")
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView{
+            VStack(spacing:30){
+//                Text("You're going to flip a coin - do you want to choose heads or tails?")
+//                NavigationLink(destination: CountdownView(exercise: exercise_1)) {
+//                    Text("Exercise")
+//                }
+//                NavigationLink(destination: ResultView(choice: "Heads")) {
+//                    Text("Choose Heads")
+//                }
+//                NavigationLink(destination: ResultView(choice: "Tails")) {
+//                    Text("Choose Tails")
+//                }
+                
+                CountdownView(exercise: basicExercises[3])
             }
         }
-        .ignoresSafeArea(.all, edges: .bottom)
-        
+        .navigationBarTitle("Navigation", displayMode: .inline)
     }
 }
 
@@ -61,32 +42,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-struct Menu : View {
-    @State var title = "Well"
-    @State var inhale = 0
-    @State var hold = 0
-    @State var exhale = 0
-    
-    var seconds = [Int](0...60)
-    
-    var body: some View {
-        ZStack{
-            Spacer()
-            VStack(alignment: .leading, spacing: 15) {
-                Picker(selection: self.$inhale, label: Text(self.title)) {
-                    ForEach(0 ..< self.seconds.count) { index in
-                        Text("\(dd(self.seconds[index]))").tag(index)
-                    }
-                }
-                .pickerStyle(.wheel)
-                .frame(minWidth: 0, maxWidth: .infinity)
-            }
-            .padding()
-            .background(Color(UIColor.systemBackground))
-            .cornerRadius(15)
-            
-                Spacer()
-        }
-    }
-}
-
