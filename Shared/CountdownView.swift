@@ -141,7 +141,7 @@ struct CountdownView: View {
                 ).shadow(color: Color.black.opacity(0.5), radius: 10, x: 10, y: 10)
                     .onTapGesture{print("Tapped")}
             }
-            Spacer(minLength: 80)
+            Spacer(minLength: 40)
             HStack {
                 Spacer()
                 // Hides the 'CANCEL' button
@@ -170,6 +170,7 @@ struct CountdownView: View {
                 //                Button("Cancel", action: { tap("Cancel") }).buttonStyle(RoundButtonStyle(color: .gray))
                 Spacer()
             }
+            Spacer()
         }
         .onReceive(timer) {_ in
             guard isCounting && isActive else {return}
@@ -224,6 +225,7 @@ struct CountdownView: View {
             sets -= 1
             reset("setTime")
         } else {
+            AudioServicesPlaySystemSound(1054)
             stop_and_reset()
         }
     }

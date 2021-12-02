@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var index = 0
     var body: some View {
         ScrollView(.horizontal) {
             HStack {

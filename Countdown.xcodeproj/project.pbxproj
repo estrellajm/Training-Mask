@@ -21,7 +21,6 @@
 		CB842985274D5BC70098021B /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295D274D5BC70098021B /* CountdownApp.swift */; };
 		CB842987274D5BC70098021B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84295E274D5BC70098021B /* ContentView.swift */; };
 		CB842989274D5BC70098021B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB84295F274D5BC70098021B /* Assets.xcassets */; };
-		CBC3F2F32750DBE800255869 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3F2F22750DBE800255869 /* Button.swift */; };
 		CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA3803275049E7007F3AA8 /* CountdownView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		CB84295E274D5BC70098021B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB84295F274D5BC70098021B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB842964274D5BC70098021B /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBC3F2F22750DBE800255869 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CBDA3803275049E7007F3AA8 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 				CB84295E274D5BC70098021B /* ContentView.swift */,
 				CB4E7B0B2753776F00EFCE91 /* PopupNav.swift */,
 				CBDA3803275049E7007F3AA8 /* CountdownView.swift */,
-				CBC3F2F22750DBE800255869 /* Button.swift */,
 				CBDA380127503EBB007F3AA8 /* misc */,
 				CBDA380227503EC7007F3AA8 /* Exercises */,
 				CB565C9D274E62160096C272 /* Resources */,
@@ -211,7 +208,6 @@
 				CB01BFDE274FDC77007977D9 /* HomeVM.swift in Sources */,
 				CB01BFD2274FD42F007977D9 /* RainbowCircle.swift in Sources */,
 				CB01BFD8274FDC05007977D9 /* StandardExercise.swift in Sources */,
-				CBC3F2F32750DBE800255869 /* Button.swift in Sources */,
 				CB01BFE127500983007977D9 /* HomeView.swift in Sources */,
 				CB01BFD5274FDBFA007977D9 /* Constants.swift in Sources */,
 				CBDA3805275049E7007F3AA8 /* CountdownView.swift in Sources */,
