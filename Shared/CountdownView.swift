@@ -91,7 +91,7 @@ struct CountdownView: View {
                     Text("\(dd(exhale))")
                         .font(.system(size: 50))
                         .foregroundColor(.white)
-                    Text("Exhable")
+                    Text("Exhale")
                         .foregroundColor(.yellow)
                 }
             }
