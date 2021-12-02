@@ -95,6 +95,7 @@ struct CountdownView: View {
                         .foregroundColor(.yellow)
                 }
             }
+            .fixedSize(horizontal: true, vertical: true)
             .frame(width: 300)
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
